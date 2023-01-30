@@ -1,0 +1,4 @@
+name = "my-worker"
+account_id = "6d8f181feef622b528f2fc75fbce8754"
+workers_dev = true
+compatibility_date = "2023-01-30"

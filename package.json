@@ -1,0 +1,23 @@
+{
+  "name": "personalwebsitecloudfare",
+  "version": "0.0.0",
+  "type": "module",
+  "devDependencies": {
+    "html-loader": "^4.2.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "wrangler": "2.1.15"
+  },
+  "scripts": {
+    "build": "npm run html && build-worker --entry src/index.js --out dist/index.js --debug",
+    "html":"node generate-html.js",
+    "deploy": "wrangler publish dist/index.js"
+  },
+  "private": true,
+  "dependencies": {
+    "@web/rollup-plugin-html": "^1.11.0",
+    "build-worker": "^0.2.2",
+    "esbuild": "0.17.5",
+    "itty-router": "^3.0.11"
+  }
+}
