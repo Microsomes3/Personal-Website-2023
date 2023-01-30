@@ -10,12 +10,14 @@
   },
   "scripts": {
     "build": "npm run html && build-worker --entry src/index.js --out dist/index.js --debug",
-    "html":"node generate-html.js",
+    "html": "node generate-html.js",
+    "uploadimages": "node upload-imagess3.js",
     "deploy": "wrangler publish dist/index.js"
   },
   "private": true,
   "dependencies": {
     "@web/rollup-plugin-html": "^1.11.0",
+    "aws-sdk": "^2.1304.0",
     "build-worker": "^0.2.2",
     "esbuild": "0.17.5",
     "itty-router": "^3.0.11"

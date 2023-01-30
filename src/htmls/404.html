@@ -5,10 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tayyab Javed 404</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
+
+<style>
+    *{
+        font-family: 'Roboto', sans-serif;
+        transition: all .2s ease-in-out;
+        margin:0;
+        padding:0
+    }
+</style>
 </head>
 <body>
-    <div>
-        404 Page Not Found
+    <div class="h-screen w-screen bg-gray-600 flex items-center justify-center text-5xl text-white font-bold">
+       <div class="h-56 w-56 rounded-full bg-black shadow-3xl border-2">
+        <img class="object-cover rounded-full hover:cursor-pointer hover:scale-75 h-56 w-56" src="https://tayyabjaved.comimages.s3.eu-west-1.amazonaws.com/pexels-chris-carter-913652.jpg"/>
+       </div>
+       <div class="ml-6 animate-bounce animate-pulse">404 Page Not Found</div>
     </div>
+    <script>
+
+        window.addEventListener("load", function(){
+            gsap.from("img", {duration: 1, x: 200, opacity: 0, scale: 0.5, ease: "bounce"});
+            gsap.from("div", {duration: 1, x: -200, opacity: 0, scale: 0.5, ease: "bounce"});
+        });
+
+
+
+
+    </script>
 </body>
 </html>
